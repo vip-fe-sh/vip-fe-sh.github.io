@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>VIP FE @ SH</title>
-  
+  <subtitle>eat more, sleep more, code more</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vip-fe-sh.com/"/>
