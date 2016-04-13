@@ -12,19 +12,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="前端,前端开发,用户体验,frontend,nodejs,JavaScript" />
+    <meta name="keywords" content="前端,组件化," />
   
 
-  <meta name="description">
+  <meta name="description" content="前端组件化方案探讨前端组件化这个词已经被玩了很久了，angular，react也流行了很久，在我们团队，由于是内部应用项目，目前的架构设计比较简单，对后续的维护和扩展都不太方便，所以最近也在尝试接入比较先进的组件化模式，本文记录一些改造过程中的思考。
+一切皆组件组件化的核心是解耦和分治，为此我们需要改变传统的网页开发思维，之前通常的做法是先写出页面的html结构和css样式，然后完成js脚本，这种">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端组件化方案探讨">
 <meta property="og:url" content="http://vip-fe-sh.com/2016/04/13/think-about-frontend-componentization-solution/index.html">
 <meta property="og:site_name" content="VIP FE @ SH">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-04-13T12:13:44.000Z">
+<meta property="og:description" content="前端组件化方案探讨前端组件化这个词已经被玩了很久了，angular，react也流行了很久，在我们团队，由于是内部应用项目，目前的架构设计比较简单，对后续的维护和扩展都不太方便，所以最近也在尝试接入比较先进的组件化模式，本文记录一些改造过程中的思考。
+一切皆组件组件化的核心是解耦和分治，为此我们需要改变传统的网页开发思维，之前通常的做法是先写出页面的html结构和css样式，然后完成js脚本，这种">
+<meta property="og:updated_time" content="2016-04-13T13:30:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端组件化方案探讨">
-<meta name="twitter:description">
+<meta name="twitter:description" content="前端组件化方案探讨前端组件化这个词已经被玩了很久了，angular，react也流行了很久，在我们团队，由于是内部应用项目，目前的架构设计比较简单，对后续的维护和扩展都不太方便，所以最近也在尝试接入比较先进的组件化模式，本文记录一些改造过程中的思考。
+一切皆组件组件化的核心是解耦和分治，为此我们需要改变传统的网页开发思维，之前通常的做法是先写出页面的html结构和css样式，然后完成js脚本，这种">
 
   
 
@@ -128,6 +131,11 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前端组件化方案探讨"><span class="toc-text">前端组件化方案探讨</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一切皆组件"><span class="toc-text">一切皆组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件维度"><span class="toc-text">组件维度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据传递"><span class="toc-text">数据传递</span></a></li></ol></li></ol></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
@@ -149,6 +157,11 @@
       </span>
 
       
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/web开发/">web开发</a>
+  </span>
+
 
 
       
@@ -158,7 +171,11 @@
 
   <div class="article-content">
     
-      
+      <h1 id="前端组件化方案探讨"><a href="#前端组件化方案探讨" class="headerlink" title="前端组件化方案探讨"></a>前端组件化方案探讨</h1><p>前端组件化这个词已经被玩了很久了，angular，react也流行了很久，在我们团队，由于是内部应用项目，目前的架构设计比较简单，对后续的维护和扩展都不太方便，所以最近也在尝试接入比较先进的组件化模式，本文记录一些改造过程中的思考。</p>
+<h3 id="一切皆组件"><a href="#一切皆组件" class="headerlink" title="一切皆组件"></a>一切皆组件</h3><p>组件化的核心是解耦和分治，为此我们需要改变传统的网页开发思维，之前通常的做法是先写出页面的html结构和css样式，然后完成js脚本，这种方式通常是把页面作为一个整体来考虑的，而组件化的基本思想就是一切皆组件，大到页面、路由，小到按钮、图片，都可以认为是一个独立的组件，每个组件包含它自己的html、css和js部分，根据状态和属性的不同呈现不同的展现，通过各种组件的组合和嵌套，我们就得到了一个完整的页面。</p>
+<h3 id="组件维度"><a href="#组件维度" class="headerlink" title="组件维度"></a>组件维度</h3><p>既然说到一切皆组件，那么在划分组件的时候如何控制粒度也是一个问题，往细了划分可以分到标签维度，这样子我们可以定义一套自己的基础标签，然后往上生成一套基础控件，再往上是模块，页面，这种方式复用性极高，但是工程量很大，还需要一套完善的组件设计规范；往粗了划分就是按照可见的功能区块进行分，这种方式实现效率高，但是复用性要差一些，所以在实际开发中还是要根据项目情况把控组件粒度，在开发效率和可复用性中找到一个平衡。</p>
+<h3 id="数据传递"><a href="#数据传递" class="headerlink" title="数据传递"></a>数据传递</h3><p>组件的数据决定了组件的展现，对于组件数据，建议的做法是统一管理，所有的数据、更改数据的方法、加载数据的方法，集中在一处管理，由页面根组件把数据分别派发到各个组件，类似facebook的flux架构，这样子可以有效的控制数据的流向和数据源的唯一性。</p>
+
     
   </div>
 </article>
