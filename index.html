@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-  <html class="light">
+  <html class="light page-home">
 
 
 <head>
@@ -30,8 +30,8 @@
   
     <link rel="icon" href="/images/favicon.ico">
   
-  
-  <link href="/css/styles.css?v=5f7f1d39" rel="stylesheet">
+
+  <link href="/css/styles.css?v=32204ee7" rel="stylesheet">
 
 
   
@@ -110,12 +110,13 @@
 
 
 
-  <div class="modal" id="modal-one" aria-hidden="true">
-  <a href="#close" class="cover" aria-hidden="true"></a>
-  <div class="modal-dialog">
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
     <div class="modal-header">
-      <a href="#close" class="btn-close" aria-hidden="true">关闭</a>
+      <span id="close" class="btn-close">关闭</span>
     </div>
+    <hr>
     <div class="modal-body">
       <ul class="list-toolbox">
         
@@ -203,7 +204,7 @@
   }
 
   window.onload = function() {
-    loadScript('/js/bundle.js?398', function() {
+    loadScript('/js/bundle.js?235687', function() {
       // load success
     });
   }
