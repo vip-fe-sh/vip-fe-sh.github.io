@@ -15,16 +15,19 @@
     <meta name="keywords" content="前端,组件化,vuejs," />
   
 
-  <meta name="description">
+  <meta name="description" content="我们的项目最终采用了一套基于 Vue.js 的组件化架构，轻量，高效，扩展性和维护性都不错，下面简单说明一下这套系统的目录结构。
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556webapp│├── dist│   ├── app.min.j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Vue.js的组件化项目目录结构">
 <meta property="og:url" content="http://vip-fe-sh.com/2016/04/16/the-folder-structure-of-componentization-by-vuejs/index.html">
 <meta property="og:site_name" content="VIP FE @ SH">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-04-16T13:01:53.000Z">
+<meta property="og:description" content="我们的项目最终采用了一套基于 Vue.js 的组件化架构，轻量，高效，扩展性和维护性都不错，下面简单说明一下这套系统的目录结构。
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556webapp│├── dist│   ├── app.min.j">
+<meta property="og:updated_time" content="2016-04-16T13:25:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Vue.js的组件化项目目录结构">
-<meta name="twitter:description">
+<meta name="twitter:description" content="我们的项目最终采用了一套基于 Vue.js 的组件化架构，轻量，高效，扩展性和维护性都不错，下面简单说明一下这套系统的目录结构。
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556webapp│├── dist│   ├── app.min.j">
 
   
 
@@ -163,7 +166,9 @@
 
   <div class="article-content">
     
-      
+      <p>我们的项目最终采用了一套基于 <a href="http://cn.vuejs.org/" target="_blank" rel="external">Vue.js</a> 的组件化架构，轻量，高效，扩展性和维护性都不错，下面简单说明一下这套系统的目录结构。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">webapp</span><br><span class="line">│</span><br><span class="line">├── dist</span><br><span class="line">│   ├── app.min.js</span><br><span class="line">│   ├── app.min.css</span><br><span class="line">│   └── vender.min.js</span><br><span class="line">│</span><br><span class="line">├── src</span><br><span class="line">│   ├── ceo.js</span><br><span class="line">│   ├── operatingBillboard.js</span><br><span class="line">│   ├── components</span><br><span class="line">│   │   ├── ceoGrid</span><br><span class="line">│   │   │   ├── index.js</span><br><span class="line">│   │   │   └── index.sass</span><br><span class="line">│   │   ├── operatingBillboardGrid</span><br><span class="line">│   │   │   ├── index.js</span><br><span class="line">│   │   │   └── index.sass</span><br><span class="line">│   │   └── chart</span><br><span class="line">│   │       ├── index.js</span><br><span class="line">│   │       └── index.sass</span><br><span class="line">│   ├── utils</span><br><span class="line">│   │   ├── chart.js</span><br><span class="line">│   │   ├── parse.js</span><br><span class="line">│   │   └── native.js</span><br><span class="line">│   ├── libs</span><br><span class="line">│   │   ├── echarts.min.js</span><br><span class="line">│   │   ├── iscroll.min.js</span><br><span class="line">│   │   └── swiper.min.js</span><br><span class="line">│   └── styles</span><br><span class="line">│       ├── ceo.sass</span><br><span class="line">│       ├── operatingBillboard.sass</span><br><span class="line">│       ├── base.sass</span><br><span class="line">│       └── themes</span><br><span class="line">│           ├── white.sass</span><br><span class="line">│           └── red.sass</span><br><span class="line">│</span><br><span class="line">├── jsp</span><br><span class="line">│   ├── ceo.jsp</span><br><span class="line">│   └── operatingBillboard.jsp</span><br><span class="line">│</span><br><span class="line">├── demo</span><br><span class="line">│   ├── ceo.html</span><br><span class="line">│   ├── operatingBillboard.html</span><br><span class="line">│   └── mock</span><br><span class="line">│       ├── ceo.json</span><br><span class="line">│       └── operatingBillboard.json</span><br><span class="line">│</span><br><span class="line">├── node_modules</span><br><span class="line">│   ├── babel</span><br><span class="line">│   ├── vue</span><br><span class="line">│   ├── webpack</span><br><span class="line">│   └── eslint</span><br><span class="line">│</span><br><span class="line">├── package.json</span><br><span class="line">│</span><br><span class="line">└── webpack.config.js</span><br></pre></td></tr></table></figure>
+
     
   </div>
 </article>
