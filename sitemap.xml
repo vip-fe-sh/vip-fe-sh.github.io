@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://vip-fe-sh.com/2016/05/01/analysis-about-vue-2-source-code/</loc>
+    
+    <lastmod>2016-05-01T07:36:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://vip-fe-sh.com/2016/04/16/the-folder-structure-of-componentization-by-vuejs/</loc>
     
     <lastmod>2016-04-27T12:51:35.000Z</lastmod>
