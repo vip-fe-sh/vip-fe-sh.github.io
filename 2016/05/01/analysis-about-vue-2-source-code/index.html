@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue 2.0 源码分析[0] | VIP FE @ SH</title>
+  <title>Vue.js 2.0 源码分析[0] | VIP FE @ SH</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,16 +15,22 @@
     <meta name="keywords" content="前端,vuejs,源码," />
   
 
-  <meta name="description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，号称带来了很多激动人心的改进和新功能，作为 Vue 和小右的忠实粉，在正式发布前先来看看 2.0 的 源码，学(mo)习(bai)一下。">
+  <meta name="description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，新版本宣称带来了很多激动人心的改进和新功能，作为 Vue 和小右同学的忠实粉，趁正式发布之前赶紧先来翻翻 2.0 的源码，学(mo)习(bai)一下。
+
+to be continued…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue 2.0 源码分析[0]">
+<meta property="og:title" content="Vue.js 2.0 源码分析[0]">
 <meta property="og:url" content="http://vip-fe-sh.com/2016/05/01/analysis-about-vue-2-source-code/index.html">
 <meta property="og:site_name" content="VIP FE @ SH">
-<meta property="og:description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，号称带来了很多激动人心的改进和新功能，作为 Vue 和小右的忠实粉，在正式发布前先来看看 2.0 的 源码，学(mo)习(bai)一下。">
-<meta property="og:updated_time" content="2016-05-01T07:36:10.000Z">
+<meta property="og:description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，新版本宣称带来了很多激动人心的改进和新功能，作为 Vue 和小右同学的忠实粉，趁正式发布之前赶紧先来翻翻 2.0 的源码，学(mo)习(bai)一下。
+
+to be continued…">
+<meta property="og:updated_time" content="2016-05-02T14:24:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue 2.0 源码分析[0]">
-<meta name="twitter:description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，号称带来了很多激动人心的改进和新功能，作为 Vue 和小右的忠实粉，在正式发布前先来看看 2.0 的 源码，学(mo)习(bai)一下。">
+<meta name="twitter:title" content="Vue.js 2.0 源码分析[0]">
+<meta name="twitter:description" content="@尤小右 同学最近发布了 Vue 2.0 的 pre-alpha 版本，原文地址，中文地址，新版本宣称带来了很多激动人心的改进和新功能，作为 Vue 和小右同学的忠实粉，趁正式发布之前赶紧先来翻翻 2.0 的源码，学(mo)习(bai)一下。
+
+to be continued…">
 
   
 
@@ -133,7 +139,7 @@
 <div class="content content-post CENTER">
    <article id="post-analysis-about-vue-2-source-code" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">vue 2.0 源码分析[0]</h1>
+    <h1 class="post-title">Vue.js 2.0 源码分析[0]</h1>
 
     <div class="article-meta">
       <span>
@@ -163,7 +169,10 @@
 
   <div class="article-content">
     
-      <p><a href="http://weibo.com/u/1761511274?topnav=1&amp;wvr=6&amp;topsug=1&amp;is_all=1" target="_blank" rel="external">@尤小右</a> 同学最近发布了 Vue 2.0 的 pre-alpha 版本，<a href="https://medium.com/the-vue-point/announcing-vue-js-2-0-8af1bde7ab9" target="_blank" rel="external">原文地址</a>，<a href="http://jiongks.name/blog/announcing-vue-2/" target="_blank" rel="external">中文地址</a>，号称带来了很多激动人心的改进和新功能，作为 Vue 和小右的忠实粉，在正式发布前先来看看 2.0 的 <a href="https://github.com/vuejs/vue/tree/next/" target="_blank" rel="external">源码</a>，学(mo)习(bai)一下。</p>
+      <p><a href="http://weibo.com/u/1761511274?topnav=1&amp;wvr=6&amp;topsug=1&amp;is_all=1" target="_blank" rel="external">@尤小右</a> 同学最近发布了 Vue 2.0 的 pre-alpha 版本，<a href="https://medium.com/the-vue-point/announcing-vue-js-2-0-8af1bde7ab9" target="_blank" rel="external">原文地址</a>，<a href="http://jiongks.name/blog/announcing-vue-2/" target="_blank" rel="external">中文地址</a>，新版本宣称带来了很多激动人心的改进和新功能，作为 Vue 和小右同学的忠实粉，趁正式发布之前赶紧先来翻翻 2.0 的<a href="https://github.com/vuejs/vue/tree/next/" target="_blank" rel="external">源码</a>，学(mo)习(bai)一下。</p>
+<blockquote>
+<p>to be continued…</p>
+</blockquote>
 
     
   </div>
@@ -254,7 +263,7 @@
     
   <section class="duoshuo-comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="" data-title="vue 2.0 源码分析[0]" data-url="http://vip-fe-sh.com/2016/05/01/analysis-about-vue-2-source-code/index.html"></div>
+    <div class="ds-thread" data-thread-key="" data-title="Vue.js 2.0 源码分析[0]" data-url="http://vip-fe-sh.com/2016/05/01/analysis-about-vue-2-source-code/index.html"></div>
     <!-- 多说评论框 end -->
   </section>
 
